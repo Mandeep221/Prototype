@@ -15,6 +15,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var labelCount: UILabel!
     
     var count = 0
+    
     var teddyCollection = [String]()
     //var teddyCollection = ["1", "2", "3", "4", "5", "6", "7", "8"]
     
@@ -31,9 +32,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
     @IBAction func teddyTapped(_ sender: Any) {
+        // Increase the count
         count = count + 1
+        
+        // Add teddy object
         teddyCollection.append("\(count)")
+        
+        // update label on top
         labelCount.text = "\(count)"
+        
+        // reload the collections view
         collectionView.reloadData()
     }
     
