@@ -10,6 +10,10 @@ import UIKit
 
 class AddSubViewController: UIViewController {
 
+    @IBOutlet weak var numCount: UILabel!
+    
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +26,15 @@ class AddSubViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func plusClicked(_ sender: Any) {
+        count = count + 1
+        numCount.text = "\(count)"
     }
-    */
-
+    
+    @IBAction func minusTapped(_ sender: Any) {
+        count = count - 1
+        numCount.text = "\(count)"
+    }
 }
+
+ 

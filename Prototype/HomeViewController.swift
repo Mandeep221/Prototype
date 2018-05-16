@@ -22,11 +22,11 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func countingTapped(_ sender: Any) {
-        performSegue(withIdentifier: "countingsegue", sender: nil)
+        self.performSegue(withIdentifier: "countingsegue", sender: nil)
     }
     
     @IBAction func addsubtapped(_ sender: Any) {
-        performSegue(withIdentifier: "addsubsegue", sender: nil)
+        self.performSegue(withIdentifier: "addsubsegue", sender: nil)
     }
     
     /*

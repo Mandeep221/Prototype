@@ -24,7 +24,6 @@
                                 <state key="normal" title="Counting"/>
                                 <connections>
                                     <action selector="countingTapped:" destination="inC-VQ-mOX" eventType="touchUpInside" id="efa-cW-5QI"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="countingsegue" id="JiA-1B-MUO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKq-OI-dfo">
@@ -33,7 +32,6 @@
                                 <state key="normal" title="Addition Subtraction"/>
                                 <connections>
                                     <action selector="addsubtapped:" destination="inC-VQ-mOX" eventType="touchUpInside" id="cPY-zZ-9of"/>
-                                    <segue destination="33n-DU-MqT" kind="show" identifier="addsubsegue" id="l5l-v7-4oa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,6 +39,10 @@
                         <viewLayoutGuide key="safeArea" id="vkQ-9y-P3b"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="zS7-p4-Q37"/>
+                    <connections>
+                        <segue destination="33n-DU-MqT" kind="show" identifier="addsubsegue" id="3aw-2V-hOD"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="countingsegue" id="AjS-jE-OAf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWh-3V-xYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,21 +136,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ODI-9W-tqc">
-                                <rect key="frame" x="0.0" y="473" width="375" height="194"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvM-Vt-3dg">
+                                <rect key="frame" x="176" y="109" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.30342308336408208" blue="0.34350806928545163" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NPL-ib-URn">
-                                <rect key="frame" x="0.0" y="224" width="375" height="249"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-Nq-AJY">
+                                <rect key="frame" x="0.0" y="244" width="375" height="262"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.45385609868238086" green="1" blue="0.12686974518006555" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                                <color key="backgroundColor" red="0.0" green="0.60784313729999995" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="icons8-plus-math-50.png"/>
+                                <connections>
+                                    <action selector="plusClicked:" destination="33n-DU-MqT" eventType="touchUpInside" id="eMv-UZ-rtI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNS-Zd-LyW">
+                                <rect key="frame" x="135" y="559" width="104" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="icons8-subtract-50.png"/>
+                                <connections>
+                                    <action selector="minusTapped:" destination="33n-DU-MqT" eventType="touchUpInside" id="1al-P2-mKB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="rlW-GZ-Sxx"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="D7g-cl-aq2"/>
+                    <connections>
+                        <outlet property="numCount" destination="ZvM-Vt-3dg" id="fl3-q9-Gse"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVZ-O3-Df7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,6 +194,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icons8-plus-math-50.png" width="50" height="50"/>
+        <image name="icons8-subtract-50.png" width="50" height="50"/>
         <image name="icons8-teddy-bear-filled-100.png" width="100" height="100"/>
     </resources>
 </document>
