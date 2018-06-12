@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A579913920ACE76800B79DEE /* icons8-subtract-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A579913720ACE76700B79DEE /* icons8-subtract-50.png */; };
 		A579913A20ACE76800B79DEE /* icons8-plus-math-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A579913820ACE76700B79DEE /* icons8-plus-math-50.png */; };
+		A580B0E020CF6DE5002F9EEF /* ChooseToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A580B0DF20CF6DE5002F9EEF /* ChooseToyViewController.swift */; };
 		A58C173A20A35E0500977923 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C173920A35E0500977923 /* AppDelegate.swift */; };
 		A58C173C20A35E0500977923 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C173B20A35E0500977923 /* ViewController.swift */; };
 		A58C173F20A35E0500977923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58C173D20A35E0500977923 /* Main.storyboard */; };
@@ -17,6 +18,11 @@
 		A58C174720A35E0500977923 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58C174520A35E0500977923 /* LaunchScreen.storyboard */; };
 		A58C174F20A363E900977923 /* icons8-teddy-bear-filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = A58C174E20A363E900977923 /* icons8-teddy-bear-filled-100.png */; };
 		A58C175120A37E3000977923 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C175020A37E3000977923 /* CollectionViewCell.swift */; };
+		A58FEB1C20ADEF4B00F10C54 /* icons8-down-arrow-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A58FEB1A20ADEF4A00F10C54 /* icons8-down-arrow-50.png */; };
+		A58FEB1D20ADEF4B00F10C54 /* icons8-up-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A58FEB1B20ADEF4A00F10C54 /* icons8-up-50.png */; };
+		A58FEB1F20ADF68200F10C54 /* icons8-teddy-bear-filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A58FEB1E20ADF68200F10C54 /* icons8-teddy-bear-filled-50.png */; };
+		A58FEB2120ADF6BA00F10C54 /* teddy.png in Resources */ = {isa = PBXBuildFile; fileRef = A58FEB2020ADF6B900F10C54 /* teddy.png */; };
+		A58FEB2320ADF6C300F10C54 /* teddy.png in Resources */ = {isa = PBXBuildFile; fileRef = A58FEB2220ADF6C300F10C54 /* teddy.png */; };
 		A5BCC89A20ABE5F200715380 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BCC89920ABE5F200715380 /* HomeViewController.swift */; };
 		A5BCC89C20ABE62800715380 /* AddSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BCC89B20ABE62800715380 /* AddSubViewController.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +30,7 @@
 /* Begin PBXFileReference section */
 		A579913720ACE76700B79DEE /* icons8-subtract-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-subtract-50.png"; sourceTree = "<group>"; };
 		A579913820ACE76700B79DEE /* icons8-plus-math-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-plus-math-50.png"; sourceTree = "<group>"; };
+		A580B0DF20CF6DE5002F9EEF /* ChooseToyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseToyViewController.swift; sourceTree = "<group>"; };
 		A58C173620A35E0500977923 /* Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58C173920A35E0500977923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A58C173B20A35E0500977923 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +41,11 @@
 		A58C174820A35E0500977923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A58C174E20A363E900977923 /* icons8-teddy-bear-filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-teddy-bear-filled-100.png"; sourceTree = "<group>"; };
 		A58C175020A37E3000977923 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		A58FEB1A20ADEF4A00F10C54 /* icons8-down-arrow-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-down-arrow-50.png"; sourceTree = "<group>"; };
+		A58FEB1B20ADEF4A00F10C54 /* icons8-up-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-up-50.png"; sourceTree = "<group>"; };
+		A58FEB1E20ADF68200F10C54 /* icons8-teddy-bear-filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-teddy-bear-filled-50.png"; sourceTree = "<group>"; };
+		A58FEB2020ADF6B900F10C54 /* teddy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teddy.png; sourceTree = "<group>"; };
+		A58FEB2220ADF6C300F10C54 /* teddy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teddy.png; path = ../../../../../Downloads/teddy.png; sourceTree = "<group>"; };
 		A5BCC89920ABE5F200715380 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A5BCC89B20ABE62800715380 /* AddSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,7 +84,14 @@
 				A58C173B20A35E0500977923 /* ViewController.swift */,
 				A5BCC89920ABE5F200715380 /* HomeViewController.swift */,
 				A58C175020A37E3000977923 /* CollectionViewCell.swift */,
+				A5BCC89B20ABE62800715380 /* AddSubViewController.swift */,
+				A580B0DF20CF6DE5002F9EEF /* ChooseToyViewController.swift */,
+				A58FEB1A20ADEF4A00F10C54 /* icons8-down-arrow-50.png */,
+				A58FEB1B20ADEF4A00F10C54 /* icons8-up-50.png */,
+				A58FEB2220ADF6C300F10C54 /* teddy.png */,
 				A58C174E20A363E900977923 /* icons8-teddy-bear-filled-100.png */,
+				A58FEB2020ADF6B900F10C54 /* teddy.png */,
+				A58FEB1E20ADF68200F10C54 /* icons8-teddy-bear-filled-50.png */,
 				A579913820ACE76700B79DEE /* icons8-plus-math-50.png */,
 				A579913720ACE76700B79DEE /* icons8-subtract-50.png */,
 				A58C173D20A35E0500977923 /* Main.storyboard */,
@@ -80,7 +99,6 @@
 				A58C174520A35E0500977923 /* LaunchScreen.storyboard */,
 				A58C174820A35E0500977923 /* Info.plist */,
 				A58C174020A35E0500977923 /* Prototype.xcdatamodeld */,
-				A5BCC89B20ABE62800715380 /* AddSubViewController.swift */,
 			);
 			path = Prototype;
 			sourceTree = "<group>";
@@ -146,10 +164,15 @@
 			files = (
 				A579913A20ACE76800B79DEE /* icons8-plus-math-50.png in Resources */,
 				A58C174F20A363E900977923 /* icons8-teddy-bear-filled-100.png in Resources */,
+				A58FEB1F20ADF68200F10C54 /* icons8-teddy-bear-filled-50.png in Resources */,
+				A58FEB2320ADF6C300F10C54 /* teddy.png in Resources */,
 				A58C174720A35E0500977923 /* LaunchScreen.storyboard in Resources */,
+				A58FEB2120ADF6BA00F10C54 /* teddy.png in Resources */,
+				A58FEB1D20ADEF4B00F10C54 /* icons8-up-50.png in Resources */,
 				A579913920ACE76800B79DEE /* icons8-subtract-50.png in Resources */,
 				A58C174420A35E0500977923 /* Assets.xcassets in Resources */,
 				A58C173F20A35E0500977923 /* Main.storyboard in Resources */,
+				A58FEB1C20ADEF4B00F10C54 /* icons8-down-arrow-50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +189,7 @@
 				A58C173C20A35E0500977923 /* ViewController.swift in Sources */,
 				A58C175120A37E3000977923 /* CollectionViewCell.swift in Sources */,
 				A58C173A20A35E0500977923 /* AppDelegate.swift in Sources */,
+				A580B0E020CF6DE5002F9EEF /* ChooseToyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

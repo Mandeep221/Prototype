@@ -9,10 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+    
+    @IBOutlet weak var toyImageView: UIImageView!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var labelCount: UILabel!
+    
+    var currentToyNumber:Int = 0
     
     var count = 0
     
@@ -24,6 +28,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Do any additional setup after loading the view, typically from a nib.
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        // assign the selected toy image
+        //var yourImage: UIImage =
+        toyImageView.image = UIImage(named: "\(currentToyNumber)")!
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +39,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func toyTapped(_ sender: Any) {
+        // Increase the count
+        count = count + 1
+        
+        // Add teddy object
+        teddyCollection.append("\(count)")
+        
+        // update label on top
+        labelCount.text = "\(count)"
+        
+        // reload the collections view
+        collectionView.reloadData()
+    }
+    
     @IBAction func teddyTapped(_ sender: Any) {
         // Increase the count
         count = count + 1
@@ -45,8 +67,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.reloadData()
     }
     
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("tapped \(teddyCollection.count)")
         return teddyCollection.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
