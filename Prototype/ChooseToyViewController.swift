@@ -37,6 +37,12 @@ class ChooseToyViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    // to prevent the done button from getting disabled once used
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.tintAdjustmentMode = .normal
+        self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
+    }
     
     @IBAction func nextTapped(_ sender: Any) {
         performSegue(withIdentifier: "countingSegue", sender: pageControl.currentPage)

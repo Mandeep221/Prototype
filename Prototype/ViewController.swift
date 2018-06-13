@@ -51,22 +51,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         // reload the collections view
         collectionView.reloadData()
+        
+        // toy tapped 10 times
+        if count % 10 == 0{
+            performSegue(withIdentifier: "rewardSegue", sender: nil)
+        }
+        
     }
-    
-    @IBAction func teddyTapped(_ sender: Any) {
-        // Increase the count
-        count = count + 1
-        
-        // Add teddy object
-        teddyCollection.append("\(count)")
-        
-        // update label on top
-        labelCount.text = "\(count)"
-        
-        // reload the collections view
-        collectionView.reloadData()
-    }
-    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

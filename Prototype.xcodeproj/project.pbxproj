@@ -10,6 +10,9 @@
 		A579913920ACE76800B79DEE /* icons8-subtract-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A579913720ACE76700B79DEE /* icons8-subtract-50.png */; };
 		A579913A20ACE76800B79DEE /* icons8-plus-math-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A579913820ACE76700B79DEE /* icons8-plus-math-50.png */; };
 		A580B0E020CF6DE5002F9EEF /* ChooseToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A580B0DF20CF6DE5002F9EEF /* ChooseToyViewController.swift */; };
+		A580B0E220D0FB74002F9EEF /* CountingRewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A580B0E120D0FB74002F9EEF /* CountingRewardViewController.swift */; };
+		A580B0E520D0FD40002F9EEF /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A580B0E420D0FD40002F9EEF /* DesignableView.swift */; };
+		A580B0E720D10E4C002F9EEF /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A580B0E620D10E4C002F9EEF /* DesignableButton.swift */; };
 		A58C173A20A35E0500977923 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C173920A35E0500977923 /* AppDelegate.swift */; };
 		A58C173C20A35E0500977923 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C173B20A35E0500977923 /* ViewController.swift */; };
 		A58C173F20A35E0500977923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58C173D20A35E0500977923 /* Main.storyboard */; };
@@ -31,6 +34,9 @@
 		A579913720ACE76700B79DEE /* icons8-subtract-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-subtract-50.png"; sourceTree = "<group>"; };
 		A579913820ACE76700B79DEE /* icons8-plus-math-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-plus-math-50.png"; sourceTree = "<group>"; };
 		A580B0DF20CF6DE5002F9EEF /* ChooseToyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseToyViewController.swift; sourceTree = "<group>"; };
+		A580B0E120D0FB74002F9EEF /* CountingRewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingRewardViewController.swift; sourceTree = "<group>"; };
+		A580B0E420D0FD40002F9EEF /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		A580B0E620D10E4C002F9EEF /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		A58C173620A35E0500977923 /* Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58C173920A35E0500977923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A58C173B20A35E0500977923 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A580B0E320D0FD12002F9EEF /* Designables */ = {
+			isa = PBXGroup;
+			children = (
+				A580B0E420D0FD40002F9EEF /* DesignableView.swift */,
+				A580B0E620D10E4C002F9EEF /* DesignableButton.swift */,
+			);
+			path = Designables;
+			sourceTree = "<group>";
+		};
 		A58C172D20A35E0500977923 = {
 			isa = PBXGroup;
 			children = (
@@ -80,12 +95,14 @@
 		A58C173820A35E0500977923 /* Prototype */ = {
 			isa = PBXGroup;
 			children = (
+				A580B0E320D0FD12002F9EEF /* Designables */,
 				A58C173920A35E0500977923 /* AppDelegate.swift */,
 				A58C173B20A35E0500977923 /* ViewController.swift */,
 				A5BCC89920ABE5F200715380 /* HomeViewController.swift */,
 				A58C175020A37E3000977923 /* CollectionViewCell.swift */,
 				A5BCC89B20ABE62800715380 /* AddSubViewController.swift */,
 				A580B0DF20CF6DE5002F9EEF /* ChooseToyViewController.swift */,
+				A580B0E120D0FB74002F9EEF /* CountingRewardViewController.swift */,
 				A58FEB1A20ADEF4A00F10C54 /* icons8-down-arrow-50.png */,
 				A58FEB1B20ADEF4A00F10C54 /* icons8-up-50.png */,
 				A58FEB2220ADF6C300F10C54 /* teddy.png */,
@@ -183,13 +200,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A580B0E220D0FB74002F9EEF /* CountingRewardViewController.swift in Sources */,
 				A5BCC89A20ABE5F200715380 /* HomeViewController.swift in Sources */,
 				A5BCC89C20ABE62800715380 /* AddSubViewController.swift in Sources */,
+				A580B0E720D10E4C002F9EEF /* DesignableButton.swift in Sources */,
 				A58C174220A35E0500977923 /* Prototype.xcdatamodeld in Sources */,
 				A58C173C20A35E0500977923 /* ViewController.swift in Sources */,
 				A58C175120A37E3000977923 /* CollectionViewCell.swift in Sources */,
 				A58C173A20A35E0500977923 /* AppDelegate.swift in Sources */,
 				A580B0E020CF6DE5002F9EEF /* ChooseToyViewController.swift in Sources */,
+				A580B0E520D0FD40002F9EEF /* DesignableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
