@@ -29,6 +29,13 @@ class HomeViewController: UIViewController {
         self.performSegue(withIdentifier: "addsubsegue", sender: nil)
     }
     
+    @IBAction func addTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "addSegue", sender: nil)
+    }
+    
+    @IBAction func subtractionTapped(_ sender: DesignableButton) {
+    }
+    
     /*
     // MARK: - Navigation
 
