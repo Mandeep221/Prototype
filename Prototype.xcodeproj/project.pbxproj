@@ -10,6 +10,7 @@
 		A5113D2720E31A9D008E804A /* CollectionViewCellUnitIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5113D2620E31A9D008E804A /* CollectionViewCellUnitIndicator.swift */; };
 		A5113D2920E31B2F008E804A /* AdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5113D2820E31B2F008E804A /* AdditionViewController.swift */; };
 		A5113D2B20E42149008E804A /* ShakingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5113D2A20E42149008E804A /* ShakingTextField.swift */; };
+		A5113D2D20E492B3008E804A /* SubtractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5113D2C20E492B3008E804A /* SubtractionViewController.swift */; };
 		A579913920ACE76800B79DEE /* icons8-subtract-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A579913720ACE76700B79DEE /* icons8-subtract-50.png */; };
 		A579913A20ACE76800B79DEE /* icons8-plus-math-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A579913820ACE76700B79DEE /* icons8-plus-math-50.png */; };
 		A580B0E020CF6DE5002F9EEF /* ChooseToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A580B0DF20CF6DE5002F9EEF /* ChooseToyViewController.swift */; };
@@ -39,6 +40,7 @@
 		A5113D2620E31A9D008E804A /* CollectionViewCellUnitIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellUnitIndicator.swift; sourceTree = "<group>"; };
 		A5113D2820E31B2F008E804A /* AdditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionViewController.swift; sourceTree = "<group>"; };
 		A5113D2A20E42149008E804A /* ShakingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakingTextField.swift; sourceTree = "<group>"; };
+		A5113D2C20E492B3008E804A /* SubtractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractionViewController.swift; sourceTree = "<group>"; };
 		A579913720ACE76700B79DEE /* icons8-subtract-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-subtract-50.png"; sourceTree = "<group>"; };
 		A579913820ACE76700B79DEE /* icons8-plus-math-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-plus-math-50.png"; sourceTree = "<group>"; };
 		A580B0DF20CF6DE5002F9EEF /* ChooseToyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseToyViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				A580B0DF20CF6DE5002F9EEF /* ChooseToyViewController.swift */,
 				A580B0E120D0FB74002F9EEF /* CountingRewardViewController.swift */,
 				A5113D2820E31B2F008E804A /* AdditionViewController.swift */,
+				A5113D2C20E492B3008E804A /* SubtractionViewController.swift */,
 				A58FEB1A20ADEF4A00F10C54 /* icons8-down-arrow-50.png */,
 				A58FEB1B20ADEF4A00F10C54 /* icons8-up-50.png */,
 				A58FEB2220ADF6C300F10C54 /* teddy.png */,
@@ -222,6 +225,7 @@
 				A580B0E720D10E4C002F9EEF /* DesignableButton.swift in Sources */,
 				A5113D2720E31A9D008E804A /* CollectionViewCellUnitIndicator.swift in Sources */,
 				A58C174220A35E0500977923 /* Prototype.xcdatamodeld in Sources */,
+				A5113D2D20E492B3008E804A /* SubtractionViewController.swift in Sources */,
 				A5113D2920E31B2F008E804A /* AdditionViewController.swift in Sources */,
 				A58C173C20A35E0500977923 /* ViewController.swift in Sources */,
 				A58C175120A37E3000977923 /* CollectionViewCell.swift in Sources */,

@@ -34,6 +34,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func subtractionTapped(_ sender: DesignableButton) {
+        self.performSegue(withIdentifier: "subSegue", sender: nil)
     }
     
     /*
