@@ -380,6 +380,9 @@
                                                     <real key="value" value="6"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="sendOtp:" destination="1Xo-u3-Pxb" eventType="touchUpInside" id="F87-Q2-Stu"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
