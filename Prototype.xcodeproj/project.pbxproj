@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		A5113D2720E31A9D008E804A /* CollectionViewCellUnitIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5113D2620E31A9D008E804A /* CollectionViewCellUnitIndicator.swift */; };
 		A5113D2920E31B2F008E804A /* AdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5113D2820E31B2F008E804A /* AdditionViewController.swift */; };
-		A5113D2B20E42149008E804A /* ShakingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5113D2A20E42149008E804A /* ShakingTextField.swift */; };
+		A5113D2B20E42149008E804A /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5113D2A20E42149008E804A /* DesignableTextField.swift */; };
 		A5113D2D20E492B3008E804A /* SubtractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5113D2C20E492B3008E804A /* SubtractionViewController.swift */; };
+		A51FFDF0211A401A0077AA43 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FFDEF211A401A0077AA43 /* LoginViewController.swift */; };
 		A579913920ACE76800B79DEE /* icons8-subtract-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A579913720ACE76700B79DEE /* icons8-subtract-50.png */; };
 		A579913A20ACE76800B79DEE /* icons8-plus-math-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A579913820ACE76700B79DEE /* icons8-plus-math-50.png */; };
 		A580B0E020CF6DE5002F9EEF /* ChooseToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A580B0DF20CF6DE5002F9EEF /* ChooseToyViewController.swift */; };
@@ -39,8 +40,9 @@
 /* Begin PBXFileReference section */
 		A5113D2620E31A9D008E804A /* CollectionViewCellUnitIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellUnitIndicator.swift; sourceTree = "<group>"; };
 		A5113D2820E31B2F008E804A /* AdditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionViewController.swift; sourceTree = "<group>"; };
-		A5113D2A20E42149008E804A /* ShakingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakingTextField.swift; sourceTree = "<group>"; };
+		A5113D2A20E42149008E804A /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		A5113D2C20E492B3008E804A /* SubtractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractionViewController.swift; sourceTree = "<group>"; };
+		A51FFDEF211A401A0077AA43 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A579913720ACE76700B79DEE /* icons8-subtract-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-subtract-50.png"; sourceTree = "<group>"; };
 		A579913820ACE76700B79DEE /* icons8-plus-math-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-plus-math-50.png"; sourceTree = "<group>"; };
 		A580B0DF20CF6DE5002F9EEF /* ChooseToyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseToyViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 				A580B0E620D10E4C002F9EEF /* DesignableButton.swift */,
 				A580B0EA20D20FD5002F9EEF /* CollectionViewCellTwo.swift */,
 				A5113D2620E31A9D008E804A /* CollectionViewCellUnitIndicator.swift */,
-				A5113D2A20E42149008E804A /* ShakingTextField.swift */,
+				A5113D2A20E42149008E804A /* DesignableTextField.swift */,
 			);
 			path = Designables;
 			sourceTree = "<group>";
@@ -111,6 +113,7 @@
 		A58C173820A35E0500977923 /* Prototype */ = {
 			isa = PBXGroup;
 			children = (
+				A51FFDEF211A401A0077AA43 /* LoginViewController.swift */,
 				A580B0E320D0FD12002F9EEF /* Designables */,
 				A58C173920A35E0500977923 /* AppDelegate.swift */,
 				A58C173B20A35E0500977923 /* ViewController.swift */,
@@ -219,7 +222,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A580B0E220D0FB74002F9EEF /* CountingRewardViewController.swift in Sources */,
-				A5113D2B20E42149008E804A /* ShakingTextField.swift in Sources */,
+				A51FFDF0211A401A0077AA43 /* LoginViewController.swift in Sources */,
+				A5113D2B20E42149008E804A /* DesignableTextField.swift in Sources */,
 				A5BCC89A20ABE5F200715380 /* HomeViewController.swift in Sources */,
 				A5BCC89C20ABE62800715380 /* AddSubViewController.swift in Sources */,
 				A580B0E720D10E4C002F9EEF /* DesignableButton.swift in Sources */,

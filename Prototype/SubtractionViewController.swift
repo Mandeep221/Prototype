@@ -17,7 +17,7 @@ class SubtractionViewController: UIViewController {
     
     @IBOutlet weak var diceNumTwoImage: UIImageView!
     
-    @IBOutlet weak var numSum: ShakingTextField!
+    @IBOutlet weak var numSum: DesignableTextField!
     
    
     @IBOutlet weak var nextButton: UIButton!
@@ -26,6 +26,10 @@ class SubtractionViewController: UIViewController {
     
     @IBOutlet weak var answerFeedback: UILabel!
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.numSum.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +37,12 @@ class SubtractionViewController: UIViewController {
         
          diceNumTwoImage.image = UIImage(named: "dice_\(randomNum2).png")
     
+        // numbers only
+        self.numSum.keyboardType = UIKeyboardType.decimalPad
+        
+        // fix max length
+            
+        
     }
 
     @IBAction func sumTextChanged(_ sender: Any) {
@@ -41,6 +51,10 @@ class SubtractionViewController: UIViewController {
     
     
     @IBAction func nextClicked(_ sender: Any) {
+        
+        // close keypad
+         self.numSum.endEditing(true)
+        
         if nextButton.titleLabel?.text == "GO!"{
             
             // check if the given answer was empty

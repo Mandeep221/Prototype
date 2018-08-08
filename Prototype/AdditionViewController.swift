@@ -14,7 +14,7 @@ class AdditionViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var numOne: UILabel!
     @IBOutlet weak var numTwo: UILabel!
     
-    @IBOutlet weak var numSum: ShakingTextField!
+    @IBOutlet weak var numSum: DesignableTextField!
     
     
     @IBOutlet weak var nextButton: UIButton!
@@ -34,6 +34,10 @@ class AdditionViewController: UIViewController, UICollectionViewDataSource, UICo
     
     @IBOutlet weak var answerFeedback: UILabel!
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.numSum.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,7 +54,8 @@ class AdditionViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionViewSum.dataSource = self
         
         
-        // Do any additional setup after loading the view.
+        // numbers only
+        self.numSum.keyboardType = UIKeyboardType.decimalPad
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -77,6 +82,9 @@ class AdditionViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     @IBAction func nextTapped(_ sender: Any) {
+        
+        // close keypad
+        self.numSum.endEditing(true)
         
         if nextButton.titleLabel?.text == "GO!"{
             
