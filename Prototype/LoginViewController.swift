@@ -18,9 +18,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let alert = UIAlertController(title: "Phone number", message: "An OTP will be sent to \n \(phoneNumber.text!)", preferredStyle: .alert)
         
         let sendOtp = UIAlertAction(title: "Send OTP", style: .default) { (UIAlertAction) in
-            PhoneAuthProvider.provider().verifyPhoneNumber(self.phoneNumber.text!) { (verificationId, error) in
+            PhoneAuthProvider.provider().verifyPhoneNumber("+1"+self.phoneNumber.text!) { (verificationId, error) in
                 if(error != nil){
-                    print("error: \(String(describing: error?.localizedDescription))")
+                    print("Auth error: \(String(describing: error?.localizedDescription))")
                 }else{
                     
                 }

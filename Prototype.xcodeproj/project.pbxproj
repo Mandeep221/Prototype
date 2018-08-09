@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		97D92167A4E376DEFF82C7F9 /* Pods_Prototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEC230050438DA0F92F3CB6 /* Pods_Prototype.framework */; };
-		A503F784211B990600F5FA18 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = A503F783211B990500F5FA18 /* GoogleService-Info (1).plist */; };
+		A503F786211BDF9500F5FA18 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A503F785211BDF9500F5FA18 /* GoogleService-Info.plist */; };
 		A5113D2720E31A9D008E804A /* CollectionViewCellUnitIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5113D2620E31A9D008E804A /* CollectionViewCellUnitIndicator.swift */; };
 		A5113D2920E31B2F008E804A /* AdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5113D2820E31B2F008E804A /* AdditionViewController.swift */; };
 		A5113D2B20E42149008E804A /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5113D2A20E42149008E804A /* DesignableTextField.swift */; };
@@ -42,7 +42,8 @@
 /* Begin PBXFileReference section */
 		1DEC230050438DA0F92F3CB6 /* Pods_Prototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE3BC3DCB8C87614D8A6544 /* Pods-Prototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-Prototype/Pods-Prototype.release.xcconfig"; sourceTree = "<group>"; };
-		A503F783211B990500F5FA18 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info (1).plist"; path = "../../../../../Downloads/GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		A503F785211BDF9500F5FA18 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A503F787211BE35200F5FA18 /* Prototype.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Prototype.entitlements; sourceTree = "<group>"; };
 		A5113D2620E31A9D008E804A /* CollectionViewCellUnitIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellUnitIndicator.swift; sourceTree = "<group>"; };
 		A5113D2820E31B2F008E804A /* AdditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionViewController.swift; sourceTree = "<group>"; };
 		A5113D2A20E42149008E804A /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
@@ -131,7 +132,8 @@
 		A58C173820A35E0500977923 /* Prototype */ = {
 			isa = PBXGroup;
 			children = (
-				A503F783211B990500F5FA18 /* GoogleService-Info (1).plist */,
+				A503F787211BE35200F5FA18 /* Prototype.entitlements */,
+				A503F785211BDF9500F5FA18 /* GoogleService-Info.plist */,
 				A51FFDEF211A401A0077AA43 /* LoginViewController.swift */,
 				A580B0E320D0FD12002F9EEF /* Designables */,
 				A58C173920A35E0500977923 /* AppDelegate.swift */,
@@ -207,6 +209,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 				};
@@ -239,9 +244,9 @@
 				A58FEB1F20ADF68200F10C54 /* icons8-teddy-bear-filled-50.png in Resources */,
 				A58FEB2320ADF6C300F10C54 /* teddy.png in Resources */,
 				A58C174720A35E0500977923 /* LaunchScreen.storyboard in Resources */,
+				A503F786211BDF9500F5FA18 /* GoogleService-Info.plist in Resources */,
 				A58FEB2120ADF6BA00F10C54 /* teddy.png in Resources */,
 				A58FEB1D20ADEF4B00F10C54 /* icons8-up-50.png in Resources */,
-				A503F784211B990600F5FA18 /* GoogleService-Info (1).plist in Resources */,
 				A579913920ACE76800B79DEE /* icons8-subtract-50.png in Resources */,
 				A58C174420A35E0500977923 /* Assets.xcassets in Resources */,
 				A58C173F20A35E0500977923 /* Main.storyboard in Resources */,
@@ -453,12 +458,15 @@
 			baseConfigurationReference = C0C16C158ED1C9A650EE5E6F /* Pods-Prototype.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Prototype/Prototype.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P4MDU98344;
 				INFOPLIST_FILE = Prototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Mandeep.Prototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -469,12 +477,15 @@
 			baseConfigurationReference = 8DE3BC3DCB8C87614D8A6544 /* Pods-Prototype.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Prototype/Prototype.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P4MDU98344;
 				INFOPLIST_FILE = Prototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Mandeep.Prototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
