@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    var moduleType = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,29 +24,35 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func countingTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "chooseToySegue", sender: nil)
+        //self.performSegue(withIdentifier: "chooseToySegue", sender: nil)
+        moduleType = "counting"
+        chooseDifficulty()
     }
     
     @IBAction func addsubtapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "addsubsegue", sender: nil)
+        moduleType = "addsub"
+        chooseDifficulty()
+        //self.performSegue(withIdentifier: "addsubsegue", sender: nil)
     }
     
     @IBAction func addTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "addSegue", sender: nil)
+        moduleType = "add"
+        chooseDifficulty()
+        //self.performSegue(withIdentifier: "addSegue", sender: nil)
     }
     
     @IBAction func subtractionTapped(_ sender: DesignableButton) {
-        self.performSegue(withIdentifier: "subSegue", sender: nil)
+        moduleType = "sub"
+        chooseDifficulty()
+        //self.performSegue(withIdentifier: "subSegue", sender: nil)
+    }
+
+    func chooseDifficulty(){
+        self.performSegue(withIdentifier: "difficultySegue", sender: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        var vc = segue.destination as! DifficultyLevelViewController
+        vc.moduleType = self.moduleType
     }
-    */
-
 }

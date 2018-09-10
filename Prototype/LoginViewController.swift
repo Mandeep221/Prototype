@@ -16,21 +16,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func sendOtp(_ sender: DesignableButton) {
         
         let alert = UIAlertController(title: "Phone number", message: "An OTP will be sent to \n \(phoneNumber.text!)", preferredStyle: .alert)
-        
+
         let sendOtp = UIAlertAction(title: "Send OTP", style: .default) { (UIAlertAction) in
             PhoneAuthProvider.provider().verifyPhoneNumber("+1"+self.phoneNumber.text!) { (verificationId, error) in
                 if(error != nil){
                     print("Auth error: \(String(describing: error?.localizedDescription))")
                 }else{
-                    
+
                 }
             }
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
+
         alert.addAction(sendOtp)
         alert.addAction(cancel)
         self.present(alert, animated: true, completion: nil)
+       // performSegue(withIdentifier: "otpSegue", sender: nil)
     }
     
     override func viewDidLoad() {
