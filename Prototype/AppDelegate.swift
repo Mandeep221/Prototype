@@ -15,8 +15,9 @@ import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var window: UIWindow!
 
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch
@@ -34,8 +35,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIApplication.shared.registerUserNotificationSettings(notificationSettings)
             UIApplication.shared.registerForRemoteNotifications()
         }
-        
+          self.prepareWindow()
         return true
+    }
+    //
+    func prepareWindow() {
+        window.rootViewController = initialRootViewController()
+        window.makeKeyAndVisible()
+        
+        //let userType = UserDefaults.standard.bool(forKey: "guest")
+        //UserDefaults.standard.set(true, forKey: "guest")
+    }
+    //let kAppDelegate         = UIApplication.shared.delegate as! AppDelegate
+
+    
+    
+    
+    fileprivate func initialRootViewController() -> UIViewController {
+        var rootViewController: UINavigationController
+        
+        // also add OR condition for the guest user
+        if let _ = Auth.auth().currentUser{
+            // logged in
+             rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeNavigation") as! UINavigationController
+        }else{
+            // logged out
+             rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginNavigation") as! UINavigationController
+        }
+        return rootViewController
+    }
+    
+    
+    func showHomeViewController() {
+        window.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeNavigation") as! UINavigationController
+    }
+
+    func showLoginViewController() {
+        window.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginNavigation") as! UINavigationController
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

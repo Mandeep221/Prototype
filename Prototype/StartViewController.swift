@@ -21,6 +21,8 @@ class StartViewController: UIViewController {
     
     
     @IBAction func continueAsGuest(_ sender: DesignableButton) {
-        performSegue(withIdentifier: "homeSegue", sender: nil)
+        //performSegue(withIdentifier: "homeSegue", sender: nil)
+         let kAppDelegate = UIApplication.shared.delegate as! AppDelegate
+        kAppDelegate.showHomeViewController()
     }
 }

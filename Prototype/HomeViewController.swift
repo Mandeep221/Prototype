@@ -7,17 +7,54 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
 
     var moduleType = ""
     
+    @IBOutlet var logoutButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // if user not logged in, hide logout button
+        let user = Auth.auth().currentUser
+        
+        if(user == nil){
+            // user not logged in
+            print("Out")
+        logoutButton.title = "Log in"
+          //  self.navigationItem.rightBarButtonItem = nil
+            //self.navigationItem.rightBarButtonItem = self.logoutButton
+        }else
+        {
+            print("Logged in")
+        }
+        
     }
 
+    // log out the user
+    @IBAction func logoutClicked(_ sender: UIBarButtonItem) {
+        
+        if let user = Auth.auth().currentUser{
+            let firebaseAuth = Auth.auth()
+            do {
+                try firebaseAuth.signOut()
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
+            
+            let kAppDelegate = UIApplication.shared.delegate as! AppDelegate
+            kAppDelegate.showLoginViewController()
+        }else{
+            performSegue(withIdentifier: "loginSegue", sender: nil)
+        }
+        
+        
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,7 +89,9 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var vc = segue.destination as! DifficultyLevelViewController
-        vc.moduleType = self.moduleType
+       if segue.identifier == "difficultySegue"{
+            var vc = segue.destination as! DifficultyLevelViewController
+            vc.moduleType = self.moduleType
+        }
     }
 }

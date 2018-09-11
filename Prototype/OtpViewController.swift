@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class OtpViewController: UIViewController {
 
@@ -54,4 +55,30 @@ class OtpViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func verifyOtp(_ sender: DesignableButton) {
+        let defaults = UserDefaults.standard
+        let credentials: PhoneAuthCredential = PhoneAuthProvider.provider().credential(withVerificationID: defaults.string(forKey: "authVID")!, verificationCode: getCode())
+        
+        Auth.auth().signIn(with: credentials) { (user, error) in
+            if error != nil{
+                print("error: \(error?.localizedDescription)")
+            }else{
+                // Success Scenario
+                print("phone number: \(user?.phoneNumber)")
+                let userInfo = user?.providerData[0]
+                print("Provider Id: \(userInfo?.providerID)")
+            
+                // to home screen
+                //self.performSegue(withIdentifier: "verifiedUserSegue", sender: nil)
+                let kAppDelegate = UIApplication.shared.delegate as! AppDelegate
+                kAppDelegate.showHomeViewController()
+            }
+        }
+    }
+    
+    func getCode() -> String {
+        return txtOne.text! + txtTwo.text! + txtThree.text! + txtFour.text! + txtFive.text! + txtSix.text!
+    }
+    
 }

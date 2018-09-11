@@ -24,15 +24,38 @@ class DifficultyLevelViewController: UIViewController {
     }
     
     @IBAction func gradeOneClicked(_ sender: UIButton) {
+        saveLevelAndLaunchModule(difficultyLevel: 1)
     }
     
     @IBAction func gradeTwoClicked(_ sender: UIButton) {
+        saveLevelAndLaunchModule(difficultyLevel: 2)
     }
     
     @IBAction func gradeThreeClicked(_ sender: UIButton) {
+        saveLevelAndLaunchModule(difficultyLevel: 3)
     }
     
     @IBAction func dismissDialog(_ sender: UIButton) {
          dismiss(animated: true, completion: nil)
+    }
+    
+    func saveLevelAndLaunchModule(difficultyLevel: Int){
+        
+        // save difficulty level to use in later screens
+         UserDefaults.standard.set(difficultyLevel, forKey: moduleType)
+        
+        // launch module
+        switch moduleType {
+        case "counting":
+            self.performSegue(withIdentifier: "countingSegue", sender: nil)
+            break
+        case "addsub":
+            self.performSegue(withIdentifier: "addsubSegue", sender: nil)
+            break
+        case "muldiv":
+            break
+        default:
+            print("Something wrong with module selection, cant launch!")
+        }
     }
 }
