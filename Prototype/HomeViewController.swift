@@ -31,7 +31,27 @@ class HomeViewController: UIViewController {
         {
             print("Logged in")
         }
+    }
+    
+    
+    func onLevelSelected(_ difficultyLevel: Int) ->(){
         
+        // save difficulty level to use in later screens
+        UserDefaults.standard.set(difficultyLevel, forKey: moduleType)
+        
+        switch moduleType {
+        case "counting":
+            performSegue(withIdentifier: "chooseToySegue", sender: nil)
+            //performSegue(withIdentifier: "selectToySegue", sender: nil)
+            break
+        case "addsub":
+            performSegue(withIdentifier: "addSubSegue", sender: nil)
+            break
+        case "muldiv":
+            break
+        default:
+            print("Something wrong with module selection")
+        }
     }
 
     // log out the user
@@ -51,8 +71,6 @@ class HomeViewController: UIViewController {
             performSegue(withIdentifier: "loginSegue", sender: nil)
         }
         
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,7 +79,6 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func countingTapped(_ sender: Any) {
-        //self.performSegue(withIdentifier: "chooseToySegue", sender: nil)
         moduleType = "counting"
         chooseDifficulty()
     }
@@ -69,19 +86,16 @@ class HomeViewController: UIViewController {
     @IBAction func addsubtapped(_ sender: Any) {
         moduleType = "addsub"
         chooseDifficulty()
-        //self.performSegue(withIdentifier: "addsubsegue", sender: nil)
     }
     
     @IBAction func addTapped(_ sender: Any) {
-        moduleType = "add"
+        moduleType = "muldiv"
         chooseDifficulty()
-        //self.performSegue(withIdentifier: "addSegue", sender: nil)
     }
     
     @IBAction func subtractionTapped(_ sender: DesignableButton) {
-        moduleType = "sub"
-        chooseDifficulty()
-        //self.performSegue(withIdentifier: "subSegue", sender: nil)
+//        moduleType = "sub"
+//        chooseDifficulty()
     }
 
     func chooseDifficulty(){
@@ -91,7 +105,7 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        if segue.identifier == "difficultySegue"{
             var vc = segue.destination as! DifficultyLevelViewController
-            vc.moduleType = self.moduleType
+            vc.onLevelSelected = onLevelSelected
         }
     }
 }

@@ -23,6 +23,8 @@ class DifficultyLevelViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    var onLevelSelected: ((_ data: Int) -> ())?
+    
     @IBAction func gradeOneClicked(_ sender: UIButton) {
         saveLevelAndLaunchModule(difficultyLevel: 1)
     }
@@ -40,22 +42,9 @@ class DifficultyLevelViewController: UIViewController {
     }
     
     func saveLevelAndLaunchModule(difficultyLevel: Int){
-        
-        // save difficulty level to use in later screens
-         UserDefaults.standard.set(difficultyLevel, forKey: moduleType)
-        
-        // launch module
-        switch moduleType {
-        case "counting":
-            self.performSegue(withIdentifier: "countingSegue", sender: nil)
-            break
-        case "addsub":
-            self.performSegue(withIdentifier: "addsubSegue", sender: nil)
-            break
-        case "muldiv":
-            break
-        default:
-            print("Something wrong with module selection, cant launch!")
-        }
+        // pass the level back to the home page
+        onLevelSelected?(difficultyLevel)
+        // dism
+       dismiss(animated: false, completion: nil)
     }
 }

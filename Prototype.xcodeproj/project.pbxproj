@@ -38,6 +38,8 @@
 		A58FEB1F20ADF68200F10C54 /* icons8-teddy-bear-filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A58FEB1E20ADF68200F10C54 /* icons8-teddy-bear-filled-50.png */; };
 		A58FEB2120ADF6BA00F10C54 /* teddy.png in Resources */ = {isa = PBXBuildFile; fileRef = A58FEB2020ADF6B900F10C54 /* teddy.png */; };
 		A58FEB2320ADF6C300F10C54 /* teddy.png in Resources */ = {isa = PBXBuildFile; fileRef = A58FEB2220ADF6C300F10C54 /* teddy.png */; };
+		A5AC1A5F2149813F00215606 /* ToyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC1A5E2149813F00215606 /* ToyItemViewController.swift */; };
+		A5AC1A61214ACC5900215606 /* SelectToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC1A60214ACC5900215606 /* SelectToyViewController.swift */; };
 		A5BCC89A20ABE5F200715380 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BCC89920ABE5F200715380 /* HomeViewController.swift */; };
 		A5BCC89C20ABE62800715380 /* AddSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BCC89B20ABE62800715380 /* AddSubViewController.swift */; };
 /* End PBXBuildFile section */
@@ -78,6 +80,8 @@
 		A58FEB1E20ADF68200F10C54 /* icons8-teddy-bear-filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-teddy-bear-filled-50.png"; sourceTree = "<group>"; };
 		A58FEB2020ADF6B900F10C54 /* teddy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teddy.png; sourceTree = "<group>"; };
 		A58FEB2220ADF6C300F10C54 /* teddy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teddy.png; path = ../../../../../Downloads/teddy.png; sourceTree = "<group>"; };
+		A5AC1A5E2149813F00215606 /* ToyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyItemViewController.swift; sourceTree = "<group>"; };
+		A5AC1A60214ACC5900215606 /* SelectToyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectToyViewController.swift; sourceTree = "<group>"; };
 		A5BCC89920ABE5F200715380 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A5BCC89B20ABE62800715380 /* AddSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubViewController.swift; sourceTree = "<group>"; };
 		C0C16C158ED1C9A650EE5E6F /* Pods-Prototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prototype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prototype/Pods-Prototype.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 				A58C174520A35E0500977923 /* LaunchScreen.storyboard */,
 				A58C174820A35E0500977923 /* Info.plist */,
 				A58C174020A35E0500977923 /* Prototype.xcdatamodeld */,
+				A5AC1A5E2149813F00215606 /* ToyItemViewController.swift */,
+				A5AC1A60214ACC5900215606 /* SelectToyViewController.swift */,
 			);
 			path = Prototype;
 			sourceTree = "<group>";
@@ -315,12 +321,14 @@
 			files = (
 				A580B0E220D0FB74002F9EEF /* CountingRewardViewController.swift in Sources */,
 				A51FFDF0211A401A0077AA43 /* LoginViewController.swift in Sources */,
+				A5AC1A5F2149813F00215606 /* ToyItemViewController.swift in Sources */,
 				A5113D2B20E42149008E804A /* DesignableTextField.swift in Sources */,
 				A5BCC89A20ABE5F200715380 /* HomeViewController.swift in Sources */,
 				A5BCC89C20ABE62800715380 /* AddSubViewController.swift in Sources */,
 				A503F78A212DBFA600F5FA18 /* StartViewController.swift in Sources */,
 				A580B0E720D10E4C002F9EEF /* DesignableButton.swift in Sources */,
 				A5113D2720E31A9D008E804A /* CollectionViewCellUnitIndicator.swift in Sources */,
+				A5AC1A61214ACC5900215606 /* SelectToyViewController.swift in Sources */,
 				A58C174220A35E0500977923 /* Prototype.xcdatamodeld in Sources */,
 				A503F78C212F00F100F5FA18 /* OtpViewController.swift in Sources */,
 				A5113D2D20E492B3008E804A /* SubtractionViewController.swift in Sources */,

@@ -33,6 +33,8 @@ class SubtractionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Difficulty level: \(UserDefaults.standard.integer(forKey: "addsub"))")
+        
         diceNumOneImage.image = UIImage(named: "dice_\(randomNum1).png")
         
          diceNumTwoImage.image = UIImage(named: "dice_\(randomNum2).png")
