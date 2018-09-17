@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class OtpViewController: UIViewController {
 
@@ -18,9 +19,14 @@ class OtpViewController: UIViewController {
     @IBOutlet weak var txtFive: UITextField!
     @IBOutlet weak var txtSix: UITextField!
    
+    var ref: DatabaseReference?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Reference to Firebase database
+        ref = Database.database().reference()
+        
         txtOne.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
          txtTwo.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
          txtThree.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
@@ -65,8 +71,27 @@ class OtpViewController: UIViewController {
                 print("error: \(error?.localizedDescription)")
             }else{
                 // Success Scenario
+                
+                //check if user is returning or new
+                self.ref?.child("users").child((user?.uid)!).child("mobile").observeSingleEvent(of: .value, with: {(snap) in
+                    
+                    if snap.exists(){
+                        
+                        // User mobile number already in DB, So user is returing
+                        print("Returing User")
+                    }else{
+                        //Phone number not available, User is new
+                        print("New User")
+                        self.ref?.child("users").child((user?.uid)!).child("mobile").setValue(user?.phoneNumber)
+                    }
+                })
+
+                
+                // #TODO: Remove this extra code later on
+                // Display user information
                 print("phone number: \(user?.phoneNumber)")
                 let userInfo = user?.providerData[0]
+                
                 print("Provider Id: \(userInfo?.providerID)")
             
                 // to home screen

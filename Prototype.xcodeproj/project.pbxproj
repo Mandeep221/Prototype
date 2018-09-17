@@ -40,6 +40,7 @@
 		A58FEB2320ADF6C300F10C54 /* teddy.png in Resources */ = {isa = PBXBuildFile; fileRef = A58FEB2220ADF6C300F10C54 /* teddy.png */; };
 		A5AC1A5F2149813F00215606 /* ToyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC1A5E2149813F00215606 /* ToyItemViewController.swift */; };
 		A5AC1A61214ACC5900215606 /* SelectToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC1A60214ACC5900215606 /* SelectToyViewController.swift */; };
+		A5AC1A63214D7F9C00215606 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC1A62214D7F9C00215606 /* ChallengeViewController.swift */; };
 		A5BCC89A20ABE5F200715380 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BCC89920ABE5F200715380 /* HomeViewController.swift */; };
 		A5BCC89C20ABE62800715380 /* AddSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BCC89B20ABE62800715380 /* AddSubViewController.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		A58FEB2220ADF6C300F10C54 /* teddy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teddy.png; path = ../../../../../Downloads/teddy.png; sourceTree = "<group>"; };
 		A5AC1A5E2149813F00215606 /* ToyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyItemViewController.swift; sourceTree = "<group>"; };
 		A5AC1A60214ACC5900215606 /* SelectToyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectToyViewController.swift; sourceTree = "<group>"; };
+		A5AC1A62214D7F9C00215606 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		A5BCC89920ABE5F200715380 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A5BCC89B20ABE62800715380 /* AddSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubViewController.swift; sourceTree = "<group>"; };
 		C0C16C158ED1C9A650EE5E6F /* Pods-Prototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prototype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prototype/Pods-Prototype.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				A58C174020A35E0500977923 /* Prototype.xcdatamodeld */,
 				A5AC1A5E2149813F00215606 /* ToyItemViewController.swift */,
 				A5AC1A60214ACC5900215606 /* SelectToyViewController.swift */,
+				A5AC1A62214D7F9C00215606 /* ChallengeViewController.swift */,
 			);
 			path = Prototype;
 			sourceTree = "<group>";
@@ -281,12 +284,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Prototype/Pods-Prototype-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +338,7 @@
 				A503F78C212F00F100F5FA18 /* OtpViewController.swift in Sources */,
 				A5113D2D20E492B3008E804A /* SubtractionViewController.swift in Sources */,
 				A5113D2920E31B2F008E804A /* AdditionViewController.swift in Sources */,
+				A5AC1A63214D7F9C00215606 /* ChallengeViewController.swift in Sources */,
 				A58C173C20A35E0500977923 /* ViewController.swift in Sources */,
 				A58C175120A37E3000977923 /* CollectionViewCell.swift in Sources */,
 				A58C173A20A35E0500977923 /* AppDelegate.swift in Sources */,

@@ -8,10 +8,12 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class HomeViewController: UIViewController {
 
     var moduleType = ""
+    var ref: DatabaseReference?
     
     @IBOutlet var logoutButton: UIBarButtonItem!
     
@@ -96,8 +98,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func subtractionTapped(_ sender: DesignableButton) {
-//        moduleType = "sub"
-//        chooseDifficulty()
+         performSegue(withIdentifier: "challengeSegue", sender: nil)
     }
 
     func chooseDifficulty(){

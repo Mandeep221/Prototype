@@ -8,4 +8,5 @@ target 'Prototype' do
   # Pods for Prototype
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
+pod 'Firebase/Database'
 end
