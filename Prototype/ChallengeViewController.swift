@@ -31,7 +31,13 @@ class ChallengeViewController: UIViewController {
     
     @IBOutlet weak var helpBox: UIView!
     
+    @IBOutlet weak var givenAnswer: DesignableTextField!
+    
+    @IBOutlet weak var feedback: UILabel!
+    @IBOutlet weak var answerReactionImageView: UIImageView!
+    
     var timer = Timer()
+    
     
     var answer = ""
     
@@ -39,6 +45,9 @@ class ChallengeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // numbers only
+        self.givenAnswer.keyboardType = UIKeyboardType.decimalPad
         
         // hide equal symbol
         equalSymbol.isHidden =  true
@@ -94,7 +103,38 @@ class ChallengeViewController: UIViewController {
         }
     }
     
+    @IBAction func evaluateAnswer(_ sender: DesignableButton) {
+        // close keypad
+        self.givenAnswer.endEditing(true)
+        
+        // check if the given answer was empty
+        if givenAnswer.text == ""{
+            givenAnswer.shake()
+            self.feedback.text = "Answer can not be empty!"
+            let image = UIImage(named: "thinking.png");
+            answerReactionImageView.image = image
+            
+        }else{
+            // Check if the answer is correct or incorrect
+            if givenAnswer!.text! == answer{
+                // correct
+                feedback.text = "Correct!"
+                let image = UIImage(named: "happy.png");
+                answerReactionImageView.image = image
+            }else{
+                // Incorrect
+                givenAnswer.shake()
+                feedback.text = "Try Again!"
+                let image = UIImage(named: "thinking.png");
+                answerReactionImageView.image = image
+            }
+        }
+    }
+    
     @IBAction func helpClicked(_ sender: UIButton) {
+        // hide keypad if its open
+        self.givenAnswer.endEditing(true)
+        
         helpBox.isHidden = false
         helpBox.alpha = 0.0
         // fade in
