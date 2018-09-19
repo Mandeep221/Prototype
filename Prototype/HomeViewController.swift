@@ -47,7 +47,8 @@ class HomeViewController: UIViewController {
             //performSegue(withIdentifier: "selectToySegue", sender: nil)
             break
         case "addsub":
-            performSegue(withIdentifier: "addSubSegue", sender: nil)
+            //print("Add Sub pohonch gya")
+            performSegue(withIdentifier: "additionsubSegue", sender: nil)
             break
         case "muldiv":
             break

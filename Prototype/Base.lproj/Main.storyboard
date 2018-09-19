@@ -180,11 +180,11 @@
                     <connections>
                         <outlet property="logoutButton" destination="oaj-S2-jRr" id="O06-Qb-3K1"/>
                         <segue destination="l9y-mO-mCO" kind="presentation" identifier="difficultySegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="gWr-uk-AyC"/>
-                        <segue destination="sFv-1m-hqh" kind="show" identifier="addSubSegue" id="BpW-ib-hqf"/>
                         <segue destination="1Xo-u3-Pxb" kind="show" identifier="loginSegue" id="HBV-fD-vpp"/>
                         <segue destination="Bkq-8E-FqY" kind="show" identifier="chooseToySegue" id="G4j-UO-59a"/>
                         <segue destination="B8J-FN-RDS" kind="show" identifier="challengeSegue" id="se9-V4-1an"/>
                         <segue destination="zfY-rv-doK" kind="show" identifier="progressSegue" id="gIr-Mz-0eu"/>
+                        <segue destination="sFv-1m-hqh" kind="show" identifier="additionsubSegue" id="nyy-kJ-hqm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWh-3V-xYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -936,7 +936,7 @@
         <!--Addition-->
         <scene sceneID="zfl-am-4xg">
             <objects>
-                <viewController id="sFv-1m-hqh" customClass="AddSubViewController" customModule="Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sFv-1m-hqh" customClass="SubtractionViewController" customModule="Prototype" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kAX-zZ-odG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
