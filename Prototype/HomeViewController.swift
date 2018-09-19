@@ -101,6 +101,11 @@ class HomeViewController: UIViewController {
          performSegue(withIdentifier: "challengeSegue", sender: nil)
     }
 
+    @IBAction func progressClicked(_ sender: DesignableButton) {
+        performSegue(withIdentifier: "progressSegue", sender: nil)
+    }
+    
+    
     func chooseDifficulty(){
         self.performSegue(withIdentifier: "difficultySegue", sender: nil)
     }

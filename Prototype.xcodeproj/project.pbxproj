@@ -42,7 +42,6 @@
 		A5AC1A61214ACC5900215606 /* SelectToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC1A60214ACC5900215606 /* SelectToyViewController.swift */; };
 		A5AC1A63214D7F9C00215606 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC1A62214D7F9C00215606 /* ChallengeViewController.swift */; };
 		A5BCC89A20ABE5F200715380 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BCC89920ABE5F200715380 /* HomeViewController.swift */; };
-		A5BCC89C20ABE62800715380 /* AddSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BCC89B20ABE62800715380 /* AddSubViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,7 +84,6 @@
 		A5AC1A60214ACC5900215606 /* SelectToyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectToyViewController.swift; sourceTree = "<group>"; };
 		A5AC1A62214D7F9C00215606 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		A5BCC89920ABE5F200715380 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		A5BCC89B20ABE62800715380 /* AddSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubViewController.swift; sourceTree = "<group>"; };
 		C0C16C158ED1C9A650EE5E6F /* Pods-Prototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prototype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prototype/Pods-Prototype.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,7 +152,6 @@
 				A58C173B20A35E0500977923 /* ViewController.swift */,
 				A580B0E820D20A76002F9EEF /* CountingTwoViewController.swift */,
 				A5BCC89920ABE5F200715380 /* HomeViewController.swift */,
-				A5BCC89B20ABE62800715380 /* AddSubViewController.swift */,
 				A580B0DF20CF6DE5002F9EEF /* ChooseToyViewController.swift */,
 				A580B0E120D0FB74002F9EEF /* CountingRewardViewController.swift */,
 				A55911522146EA9600C92A7B /* DifficultyLevelViewController.swift */,
@@ -329,7 +326,6 @@
 				A5AC1A5F2149813F00215606 /* ToyItemViewController.swift in Sources */,
 				A5113D2B20E42149008E804A /* DesignableTextField.swift in Sources */,
 				A5BCC89A20ABE5F200715380 /* HomeViewController.swift in Sources */,
-				A5BCC89C20ABE62800715380 /* AddSubViewController.swift in Sources */,
 				A503F78A212DBFA600F5FA18 /* StartViewController.swift in Sources */,
 				A580B0E720D10E4C002F9EEF /* DesignableButton.swift in Sources */,
 				A5113D2720E31A9D008E804A /* CollectionViewCellUnitIndicator.swift in Sources */,
