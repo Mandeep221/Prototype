@@ -36,9 +36,9 @@ class ProgressViewController: UIViewController {
         formatter.timeStyle = .short
         let result = formatter.string(from: date)
         
-        print("Date is: \(date)")
+        //print("Date is: \(date)")
         
-       // Utility.updateProgressTimestamp("counting", 100)
+        Utility.updateProgressTimestamp("counting", 100)
     }
 
 }

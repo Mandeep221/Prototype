@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch
         
         // Initialize Firebase
+//        FirebaseConfiguration.shared.setLoggerLevel(.debug)
         FirebaseApp.configure()
         
         // iOS 10 support
