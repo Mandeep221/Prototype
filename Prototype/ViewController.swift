@@ -21,7 +21,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var count = 0
     
     var teddyCollection = [String]()
-    //var teddyCollection = ["1", "2", "3", "4", "5", "6", "7", "8"]
+    
+    var startTime = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // assign the selected toy image
         //var yourImage: UIImage =
         toyImageView.image = UIImage(named: "\(currentToyNumber)")!
+        
+        startTime = CACurrentMediaTime()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +63,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print("tapped \(teddyCollection.count)")
         return teddyCollection.count
@@ -71,6 +74,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cell.teddyCount.text = teddyCollection[indexPath.item]
         return cell
     }
-    
-}
 
+    override func viewDidDisappear(_ animated: Bool) {
+        // calculate elapsed time
+        let elapsed = CACurrentMediaTime() - startTime
+        print("Elapsed time : \(elapsed)")
+    }
+}

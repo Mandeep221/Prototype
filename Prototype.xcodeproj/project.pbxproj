@@ -17,7 +17,9 @@
 		A5113D2D20E492B3008E804A /* SubtractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5113D2C20E492B3008E804A /* SubtractionViewController.swift */; };
 		A51FFDF0211A401A0077AA43 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FFDEF211A401A0077AA43 /* LoginViewController.swift */; };
 		A55179052152CE78003292DA /* AddSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55179042152CE78003292DA /* AddSubViewController.swift */; };
+		A55179072152D231003292DA /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55179062152D231003292DA /* ProgressViewController.swift */; };
 		A55911532146EA9600C92A7B /* DifficultyLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55911522146EA9600C92A7B /* DifficultyLevelViewController.swift */; };
+		A56D6A6121534789002524E2 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D6A6021534789002524E2 /* Utility.swift */; };
 		A579913920ACE76800B79DEE /* icons8-subtract-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A579913720ACE76700B79DEE /* icons8-subtract-50.png */; };
 		A579913A20ACE76800B79DEE /* icons8-plus-math-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A579913820ACE76700B79DEE /* icons8-plus-math-50.png */; };
 		A580B0E020CF6DE5002F9EEF /* ChooseToyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A580B0DF20CF6DE5002F9EEF /* ChooseToyViewController.swift */; };
@@ -58,7 +60,9 @@
 		A5113D2C20E492B3008E804A /* SubtractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractionViewController.swift; sourceTree = "<group>"; };
 		A51FFDEF211A401A0077AA43 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A55179042152CE78003292DA /* AddSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubViewController.swift; sourceTree = "<group>"; };
+		A55179062152D231003292DA /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		A55911522146EA9600C92A7B /* DifficultyLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyLevelViewController.swift; sourceTree = "<group>"; };
+		A56D6A6021534789002524E2 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		A579913720ACE76700B79DEE /* icons8-subtract-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-subtract-50.png"; sourceTree = "<group>"; };
 		A579913820ACE76700B79DEE /* icons8-plus-math-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-plus-math-50.png"; sourceTree = "<group>"; };
 		A580B0DF20CF6DE5002F9EEF /* ChooseToyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseToyViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +180,8 @@
 				A5AC1A60214ACC5900215606 /* SelectToyViewController.swift */,
 				A5AC1A62214D7F9C00215606 /* ChallengeViewController.swift */,
 				A55179042152CE78003292DA /* AddSubViewController.swift */,
+				A55179062152D231003292DA /* ProgressViewController.swift */,
+				A56D6A6021534789002524E2 /* Utility.swift */,
 			);
 			path = Prototype;
 			sourceTree = "<group>";
@@ -327,12 +333,14 @@
 				A580B0E220D0FB74002F9EEF /* CountingRewardViewController.swift in Sources */,
 				A51FFDF0211A401A0077AA43 /* LoginViewController.swift in Sources */,
 				A5AC1A5F2149813F00215606 /* ToyItemViewController.swift in Sources */,
+				A55179072152D231003292DA /* ProgressViewController.swift in Sources */,
 				A5113D2B20E42149008E804A /* DesignableTextField.swift in Sources */,
 				A5BCC89A20ABE5F200715380 /* HomeViewController.swift in Sources */,
 				A503F78A212DBFA600F5FA18 /* StartViewController.swift in Sources */,
 				A580B0E720D10E4C002F9EEF /* DesignableButton.swift in Sources */,
 				A5113D2720E31A9D008E804A /* CollectionViewCellUnitIndicator.swift in Sources */,
 				A5AC1A61214ACC5900215606 /* SelectToyViewController.swift in Sources */,
+				A56D6A6121534789002524E2 /* Utility.swift in Sources */,
 				A58C174220A35E0500977923 /* Prototype.xcdatamodeld in Sources */,
 				A503F78C212F00F100F5FA18 /* OtpViewController.swift in Sources */,
 				A5113D2D20E492B3008E804A /* SubtractionViewController.swift in Sources */,
