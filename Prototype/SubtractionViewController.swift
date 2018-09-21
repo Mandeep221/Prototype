@@ -26,6 +26,8 @@ class SubtractionViewController: UIViewController {
     
     @IBOutlet weak var answerFeedback: UILabel!
     
+    var startTime = 0.0
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.numSum.endEditing(true)
     }
@@ -42,7 +44,8 @@ class SubtractionViewController: UIViewController {
         // numbers only
         self.numSum.keyboardType = UIKeyboardType.decimalPad
         
-        // fix max length
+        // start time of this module
+         startTime = CACurrentMediaTime()
             
         
     }
@@ -105,5 +108,13 @@ class SubtractionViewController: UIViewController {
             
             
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        // calculate elapsed time
+        let elapsed = CACurrentMediaTime() - startTime
+        
+        // push the time of use of this module into Firebase
+        Utility.updateProgressTimestamp("addsub", Int(elapsed))
     }
 }

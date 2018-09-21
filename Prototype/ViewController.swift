@@ -34,6 +34,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //var yourImage: UIImage =
         toyImageView.image = UIImage(named: "\(currentToyNumber)")!
         
+        // set the start time of the use of this module
         startTime = CACurrentMediaTime()
         
     }
@@ -78,6 +79,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidDisappear(_ animated: Bool) {
         // calculate elapsed time
         let elapsed = CACurrentMediaTime() - startTime
-        print("Elapsed time : \(elapsed)")
+        
+        // push the time of use of this module into Firebase
+        Utility.updateProgressTimestamp("counting", Int(elapsed))
     }
 }

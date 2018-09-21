@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class ProgressViewController: UIViewController {
 
@@ -25,7 +27,8 @@ class ProgressViewController: UIViewController {
     @IBOutlet weak var addSubDurationTwo: UILabel!
     @IBOutlet weak var addSubDurationThree: UILabel!
     
-  
+    var ref: DatabaseReference?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,8 +40,11 @@ class ProgressViewController: UIViewController {
         let result = formatter.string(from: date)
         
         //print("Date is: \(date)")
+        fetchDataFromFirebase()
+    }
+    
+    func fetchDataFromFirebase() {
         
-        Utility.updateProgressTimestamp("counting", 100)
     }
 
 }
